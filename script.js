@@ -503,14 +503,16 @@ var jsonData =[
 var itemsPerPage = 10;
 var currentPage = 1;
 
-function displayData(page) {
+function displayData(page, page_no) {
 var startIdx = (page - 1) * itemsPerPage;
 var endIdx = startIdx + itemsPerPage;
 var currentPageData = jsonData.slice(startIdx, endIdx);
 
 
 var container = document.querySelector('.table-responsive');
-container.innerHTML = ''; 
+container.innerHTML = '';
+container.innerText = page_no ;
+
 
 var table = document.createElement('table');
 table.setAttribute('class', 'table table-bordered');
@@ -536,44 +538,53 @@ container.appendChild(table);
 
 function firstPage(){
   currentPage =1;
-  displayData(currentPage);
+  displayData(currentPage, num);
 
 }
 function two(){
   currentPage =2;
-  displayData(currentPage);
+  let num= "Welcome to Second Page...👈🏻";
+  displayData(currentPage, num);
 }
 function three(){
   currentPage = 3;
-  displayData(currentPage);
+  let num= "Welcome to Third Page...👈🏻";
+  displayData(currentPage, num);
 }
 function four(){
   currentPage = 4;
-  displayData(currentPage);
+  let num= "Welcome to Fourth Page...👈🏻";
+  displayData(currentPage, num);
 }
 function five(){
   currentPage =5;
-  displayData(currentPage);
+  let num= "Welcome to Fifth Page...👈🏻";
+  displayData(currentPage,num);
 }
 function six(){
   currentPage = 6;
-  displayData(currentPage);
+  let num= "Welcome to Sixth Page...👈🏻";
+  displayData(currentPage, num);
 }
 function seven(){
   currentPage = 7;
-  displayData(currentPage);
+  let num= "Welcome to Seventh Page...👈🏻";
+  displayData(currentPage, num);
 }
 function eight(){
   currentPage = 8;
-  displayData(currentPage);
+  let num= "Welcome to Eighth Page...👈🏻";
+  displayData(currentPage, num);
 }
 function nine(){
   currentPage = 9;
-  displayData(currentPage);
+  let num= "Welcome to Ninth Page...👈🏻";
+  displayData(currentPage, num);
 }
 function ten(){
   currentPage = 10;
-  displayData(currentPage);
+  let num= "Welcome to Tenth Page...👈🏻";
+  displayData(currentPage, num);
 }
 
 function showPreviousPage() {
@@ -585,4 +596,5 @@ else{
   currentPage = 1;
 }
 }
-displayData(currentPage);
+let num= "Welcome to First Page...👈🏻";
+displayData(currentPage, num);
